@@ -1178,17 +1178,17 @@
         },
         {
             "name": "mediawiki/semantic-media-wiki",
-            "version": "4.0.1",
-            "version_normalized": "4.0.1.0",
+            "version": "4.0.0",
+            "version_normalized": "4.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SemanticMediaWiki/SemanticMediaWiki.git",
-                "reference": "fd1b241a46341786d538c20112bf7132d8279398"
+                "reference": "86bcff16f63975073235456c8bd2d6fc9d270507"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticMediaWiki/zipball/fd1b241a46341786d538c20112bf7132d8279398",
-                "reference": "fd1b241a46341786d538c20112bf7132d8279398",
+                "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticMediaWiki/zipball/86bcff16f63975073235456c8bd2d6fc9d270507",
+                "reference": "86bcff16f63975073235456c8bd2d6fc9d270507",
                 "shasum": ""
             },
             "require": {
@@ -1204,14 +1204,13 @@
                 "onoi/http-request": "~1.1",
                 "onoi/message-reporter": "~1.0",
                 "onoi/shared-resources": "~0.3",
+                "onoi/tesa": "~0.1",
                 "param-processor/param-processor": "~1.2",
                 "php": ">=7.3",
                 "psr/log": "~1.0",
                 "seld/jsonlint": "^1.7",
                 "serialization/serialization": "~3.2|~4.0",
-                "symfony/css-selector": "^5|^4|^3.3",
-                "wikimedia/cdb": "^2|^1",
-                "wikimedia/textcat": "^2|^1.1"
+                "symfony/css-selector": "^5|^4|^3.3"
             },
             "replace": {
                 "mediawiki/semantic-mediawiki": "*"
@@ -1223,11 +1222,11 @@
             "suggest": {
                 "mediawiki/semantic-result-formats": "Provides additional result formats for queries of structured data"
             },
-            "time": "2022-03-24T19:57:47+00:00",
+            "time": "2022-01-18T16:15:48+00:00",
             "type": "mediawiki-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -1240,7 +1239,6 @@
                 },
                 "psr-4": {
                     "SMW\\": "src/",
-                    "Onoi\\Tesa\\": "src/Tesa/src/",
                     "SMW\\Tests\\": "tests/phpunit/",
                     "SMW\\Maintenance\\": "maintenance/"
                 },
@@ -1300,17 +1298,17 @@
         },
         {
             "name": "mediawiki/semantic-result-formats",
-            "version": "4.0.1",
-            "version_normalized": "4.0.1.0",
+            "version": "4.0.0",
+            "version_normalized": "4.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SemanticMediaWiki/SemanticResultFormats.git",
-                "reference": "44c0bd85f89a2dfd72327fe742740895d7f32b11"
+                "reference": "607a2a339d53156bd24739b2a7e6a7caa85cbde3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticResultFormats/zipball/44c0bd85f89a2dfd72327fe742740895d7f32b11",
-                "reference": "44c0bd85f89a2dfd72327fe742740895d7f32b11",
+                "url": "https://api.github.com/repos/SemanticMediaWiki/SemanticResultFormats/zipball/607a2a339d53156bd24739b2a7e6a7caa85cbde3",
+                "reference": "607a2a339d53156bd24739b2a7e6a7caa85cbde3",
                 "shasum": ""
             },
             "require": {
@@ -1333,7 +1331,7 @@
                 "phpoffice/phpexcel": "Required for 'format=excel'",
                 "phpoffice/phpspreadsheet": "Required for 'format=spreadsheet'"
             },
-            "time": "2022-01-26T11:52:51+00:00",
+            "time": "2022-01-25T21:34:58+00:00",
             "type": "mediawiki-extension",
             "extra": {
                 "branch-alias": {
@@ -1850,6 +1848,56 @@
                 "source": "https://github.com/onoi/shared-resources/tree/0.4.3"
             },
             "install-path": "../onoi/shared-resources"
+        },
+        {
+            "name": "onoi/tesa",
+            "version": "0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/onoi/tesa.git",
+                "reference": "c8a07ca8738cf6d644e83d10ba2cb1ef93dffa7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/onoi/tesa/zipball/c8a07ca8738cf6d644e83d10ba2cb1ef93dffa7d",
+                "reference": "c8a07ca8738cf6d644e83d10ba2cb1ef93dffa7d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.2",
+                "wikimedia/cdb": "~1.0",
+                "wikimedia/textcat": "~1.1"
+            },
+            "time": "2016-08-07T10:40:08+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Onoi\\Tesa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mwjames",
+                    "homepage": "https://github.com/mwjames"
+                }
+            ],
+            "description": "A simple library to sanitize text elements",
+            "homepage": "https://github.com/onoi/tesa",
+            "keywords": [
+                "transliteration"
+            ],
+            "support": {
+                "issues": "https://github.com/onoi/tesa/issues",
+                "source": "https://github.com/onoi/tesa/tree/master"
+            },
+            "install-path": "../onoi/tesa"
         },
         {
             "name": "oojs/oojs-ui",
@@ -4290,32 +4338,31 @@
         },
         {
             "name": "wikimedia/textcat",
-            "version": "2.0.0",
-            "version_normalized": "2.0.0.0",
+            "version": "1.3.0",
+            "version_normalized": "1.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikimedia/textcat.git",
-                "reference": "dfdfb1c41bb016814a9d4da3aa68b62437b54a82"
+                "reference": "4f13aed2b32382c9d2fe9dc8b3e3fbb26ea4a2a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikimedia/textcat/zipball/dfdfb1c41bb016814a9d4da3aa68b62437b54a82",
-                "reference": "dfdfb1c41bb016814a9d4da3aa68b62437b54a82",
+                "url": "https://api.github.com/repos/wikimedia/textcat/zipball/4f13aed2b32382c9d2fe9dc8b3e3fbb26ea4a2a9",
+                "reference": "4f13aed2b32382c9d2fe9dc8b3e3fbb26ea4a2a9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.9"
+                "php": ">=5.6.99"
             },
             "require-dev": {
-                "mediawiki/mediawiki-codesniffer": "38.0.0",
-                "mediawiki/mediawiki-phan-config": "0.11.1",
-                "mediawiki/minus-x": "1.1.1",
-                "ockcyp/covers-validator": "1.3.3",
-                "php-parallel-lint/php-console-highlighter": "0.5.0",
-                "php-parallel-lint/php-parallel-lint": "1.3.1",
-                "phpunit/phpunit": "^8.5"
+                "jakub-onderka/php-console-highlighter": "0.3.2",
+                "jakub-onderka/php-parallel-lint": "1.0.0",
+                "mediawiki/mediawiki-codesniffer": "24.0.0",
+                "mediawiki/minus-x": "0.3.1",
+                "ockcyp/covers-validator": "0.5.1 || 0.6.1",
+                "phpunit/phpunit": "4.8.36 || ^6.5"
             },
-            "time": "2022-03-15T15:54:48+00:00",
+            "time": "2019-02-12T05:25:57+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -4340,7 +4387,7 @@
             "description": "PHP port of the TextCat language guesser utility, see http://odur.let.rug.nl/~vannoord/TextCat/.",
             "homepage": "https://www.mediawiki.org/wiki/TextCat",
             "support": {
-                "source": "https://github.com/wikimedia/textcat/tree/2.0.0"
+                "source": "https://github.com/wikimedia/textcat/tree/1.3.0"
             },
             "install-path": "../wikimedia/textcat"
         },
